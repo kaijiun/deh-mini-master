@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="15dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sound_player"
+            android:layout_width="53dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:fab_icon="@android:drawable/ic_media_play" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/alert_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/close_dialog"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ic_close_blue_200_24dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/question_context"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_above="@+id/progress_loader"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scrollbars="vertical"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progress_loader"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/media_list"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/media_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"
+                    app:reverseLayout="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/discribe_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/fab_orange_bright"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="輸入文字部分的答案" />
+
+                <Button
+                    android:id="@+id/upload_media"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorMenu"
+                    android:scrollbars="vertical"
+                    android:text="製作多媒體部分的答案" />
+
+                <Button
+                    android:id="@+id/btn_upload_media"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/alert_main_button"
+                    android:scrollbars="vertical"
+                    android:text="上傳答案"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/alert_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <Button
+        android:id="@+id/btn_take_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拍照" />
+
+    <Button
+        android:id="@+id/btn_take_vid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="錄影" />
+
+    <Button
+        android:id="@+id/btn_take_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="錄音" />
+
+    <Button
+        android:id="@+id/btn_take_aud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選擇錄音檔" />
+
+    <Button
+        android:id="@+id/btn_chose_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選擇照片" />
+
+    <Button
+        android:id="@+id/btn_chose_vid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選擇影片" />
+
+    <Button
+        android:id="@+id/btn_cancel_take"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alert_main_button"
+        android:gravity="center"
+        android:text="關閉" />
+
+</LinearLayout>

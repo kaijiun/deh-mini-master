@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/alert_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+
+    <Button
+        android:id="@+id/btn_pick_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123" />
+
+    <Button
+        android:id="@+id/btn_take_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123" />
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alert_main_button"
+        android:gravity="center"
+        android:text="關閉" />
+
+</LinearLayout>

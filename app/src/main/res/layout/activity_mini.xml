@@ -1,0 +1,121 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_blue_light"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include
+            android:id="@+id/mapp"
+            layout="@layout/content_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+            />
+
+        <include
+            android:id="@+id/include_menu_log"
+            layout="@layout/fragment_menu_log"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:visibility="gone"
+            app:layout_anchor="@+id/mapp"
+            app:layout_anchorGravity="top|center_horizontal" />
+
+        <include
+            android:id="@+id/include_my_site"
+            layout="@layout/fragment_my_site"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:visibility="gone"
+            app:layout_anchor="@+id/mapp"
+            app:layout_anchorGravity="top|center_horizontal" />
+
+        <include
+            android:id="@+id/include_search"
+            layout="@layout/fragment_search"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:visibility="gone"
+            app:layout_anchor="@+id/mapp"
+            app:layout_anchorGravity="top|center_horizontal" />
+
+        <include
+            android:id="@+id/bubble"
+            layout="@layout/fragment_bubble"
+            android:layout_width="240dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="140dp"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/bubble2"
+            layout="@layout/fragment_bubble2"
+            android:layout_width="310dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="140dp"
+            android:visibility="gone" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lr_view"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+
+        <ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/vf"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/menu_container"
+                layout="@layout/menu_container" />
+
+            <include
+                android:id="@+id/menu_frame"
+                layout="@layout/menu_list" />
+
+        </ViewFlipper>
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

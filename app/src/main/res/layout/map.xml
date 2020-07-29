@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp" />
+
+
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-69dp"
+        android:layout_marginTop="31dp"
+        android:layout_toEndOf="@+id/get_point"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="65dp"
+        app:fab_addButtonColorNormal="#5D96C1"
+        app:fab_addButtonColorPressed="#2E6289"
+        app:fab_addButtonSize="normal"
+        app:fab_labelsPosition="left"
+        fab:fab_expandDirection="down">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:fab_colorNormal="#5D96C1"
+            app:fab_colorPressed="#2E6289"
+            app:fab_icon="@drawable/exit"
+            fab:fab_title="FAB 3" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:fab_colorNormal="#5D96C1"
+            app:fab_colorPressed="#2E6289"
+            app:fab_icon="@drawable/answer_history"
+            fab:fab_title="FAB 2" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:fab_colorNormal="#5D96C1"
+            app:fab_colorPressed="#2E6289"
+            app:fab_icon="@drawable/game_over"
+            fab:fab_title="FAB 1" />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2E6289"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/user"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="8"
+            android:minLines="1"
+            android:singleLine="true"
+            android:text="@string/score"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/get_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginStart="280dp"
+        android:text="@string/get_point"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="200dp"
+        android:layout_height="126dp"
+        android:layout_alignBottom="@+id/get_point"
+        android:layout_centerHorizontal="true"
+        app:fab_colorNormal="@color/blue"
+        app:fab_colorPressed="@color/accent"
+        app:fab_icon="@android:drawable/ic_menu_mylocation"
+        app:fab_size="normal" />
+
+
+</RelativeLayout>
